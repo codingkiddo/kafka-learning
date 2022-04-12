@@ -158,3 +158,36 @@ PRIMARY KEY ((event_id)));
 
 INSERT INTO pack_events (event_id, event_data)
 VALUES ('500', '{"foo":"bar"}');
+
+
+
+
+
+https://www.google.com/search?q=reactjs+firebase+authentication&rlz=1C5CHFA_enIN987IN987&oq=reactjs+fire&aqs=chrome.0.35i39j69i57j35i39j0i512l4j69i60.15267j0j7&sourceid=chrome&ie=UTF-8
+https://www.freecodecamp.org/news/react-firebase-authentication-and-crud-operations/
+https://blog.logrocket.com/user-authentication-firebase-react-apps/
+https://www.google.com/search?q=reactjs+nodejs+authentication&rlz=1C5CHFA_enIN987IN987&oq=reactjs+nodejs+authentication&aqs=chrome..69i57j0i390l4.6137j0j7&sourceid=chrome&ie=UTF-8
+https://www.google.com/search?q=writing+from+kafka+to+cassandra&rlz=1C5CHFA_enIN987IN987&oq=writing+from+kafka+to+ca&aqs=chrome.1.69i57j33i160.7025j0j7&sourceid=chrome&ie=UTF-8
+https://docs.lenses.io/5.0/integrations/connectors/stream-reactor/sinks/cassandrasinkconnector/
+https://docs.confluent.io/kafka-connect-cassandra/current/cassandra_sink_connector_config.html
+https://lenses.io/blog/2018/03/cassandra-to-kafka/
+https://lenses.io/blog/2018/03/cassandra-to-kafka-part-2/
+https://hevodata.com/learn/kafka-and-cassandra/
+https://lenses.io/blog/2018/03/cassandra-to-kafka/
+https://docs.lenses.io/5.0/integrations/connectors/stream-reactor/sinks/cassandrasinkconnector/
+https://github.com/lensesio/stream-reactor/releases
+https://theagilejedi.wordpress.com/2018/01/23/using-the-kafka-connect-cassandra-source-part-1/
+https://cassandra.apache.org/_/quickstart.html
+https://www.tutorialspoint.com/cassandra/cassandra_installation.htm
+https://docs.scala-lang.org/getting-started/index.html
+https://kafka.apache.org/downloads
+https://docs.datastax.com/en/dse/5.1/cql/cql/cql_reference/refDateTimeFormats.html
+https://www.google.com/search?q=Error+while+fetching+metadata+with+correlation+id+3+%3A+%7Borders%3DLEADER_NOT_AVAILABLE%7D+&rlz=1C5CHFA_enIN987IN987&sxsrf=APq-WBuOxy3wyrMgArCzJiU551VnDabtFQ%3A1649706295345&ei=N4VUYrXYFK6Y4-EP6eGAyA8&ved=0ahUKEwj1z97t4oz3AhUuzDgGHekwAPkQ4dUDCA4&uact=5&oq=Error+while+fetching+metadata+with+correlation+id+3+%3A+%7Borders%3DLEADER_NOT_AVAILABLE%7D+&gs_lcp=Cgdnd3Mtd2l6EANKBAhBGAFKBAhGGABQtw5Ytw5g3BBoAXAAeACAAZQBiAGUAZIBAzAuMZgBAKABAcABAQ&sclient=gws-wiz
+https://www.google.com/search?q=Kafka+Cassandra+connector+example&rlz=1C5CHFA_enIN987IN987&oq=kafka+cass&aqs=chrome.2.69i59l3j69i57j69i60l3j69i65.13490j0j7&sourceid=chrome&ie=UTF-8
+https://digitalis.io/blog/apache-cassandra/getting-started-with-kafka-cassandra-connector/
+https://www.google.com/search?q=kafka+remove+all+connectors&rlz=1C5CHFA_enIN987IN987&oq=kafka+remove+all+connectors&aqs=chrome..69i57j0i22i30.9969j0j4&sourceid=chrome&ie=UTF-8
+https://www.google.com/search?q=kafka+ksldb&rlz=1C5CHFA_enIN987IN987&oq=kafka+ksldb&aqs=chrome..69i57j0i13l4j0i10i13i30l2j0i5i13i30l3.7801j0j4&sourceid=chrome&ie=UTF-8
+https://ksqldb.io/quickstart.html
+https://www.baeldung.com/ksqldb
+https://docs.confluent.io/4.1.0/ksql/docs/installation/installing.html
+https://docs.datastax.com/en/kafka/doc/kafka/kafkaStringJson.html
