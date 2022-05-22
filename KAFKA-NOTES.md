@@ -79,7 +79,7 @@ curl -X POST -H "Content-Type: application/json" -d @connect-cassandra-orders.js
 
 
 
-./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic orders --property parse.key=true --property key.separator=: < data.txt
+./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic basic_topic --property parse.key=true --property key.separator=: < data.txt
 {
   "name": "cassandra-sink-basic_topic",
   "config": {
@@ -106,11 +106,38 @@ curl -X POST -H "Content-Type: application/json" -d @connect-cassandra-orders.js
 
 ./bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 
-
+./bin/kafka-topics.sh --create --topic basic_table --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3
 
 https://digitalis.io/blog/apache-cassandra/getting-started-with-kafka-cassandra-connector/
 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk/Contents/Home
 
+export KAFKA_CONNECT_REST=http://localhost:8083
+
+
+
+./bin/kafka-topics.sh --describe --bootstrap-server localhost:9092 --topic basic_table
+
+./bin/kafka-consumer.sh ---bootstrap-server localhost:9092 --topic basic_table
+
+
+CREATE KEYSPACE blog WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 3};
+USE blog;
+CREATE TABLE basic_table (userid text PRIMARY KEY, username text);
+INSERT INTO basic_table (userid, username) VALUES ("1", "Vinod");
+INSERT INTO basic_table ("userid", "username") VALUES ("1", "Vinod");
+SELECT * FROM basic_table;
+
+SELECT * FROM blog.basic_table;
+
+
+
+{"userid": "2", "username": "mention data"}
+
+./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic basic_table --property parse.key=true --property key.separator=: < data.txt
+
+
+./bin/kafka-console-consumer.sh --topic basic_table --from-beginning --bootstrap-server localhost:9092
 
 ./bin/kafka-run-class.sh kafka.tools.GetOffsetShell  --topic test_topic --bootstrap-server localhost:9092 --group testgroup
 
