@@ -29,8 +29,41 @@ WITH CLUSTERING ORDER BY (created asc);
 ./bin/kafka-topics.sh \
   --delete --topic orders \
   --bootstrap-server localhost:9092
-  
-./bin/kafka-topics.sh --create --topic basic_topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+
+
+
+
+
+
+
+
+-- 
+
+
+# Start the ZooKeeper service
+./bin/zookeeper-server-start.sh config/zookeeper.properties
+
+# Start the Kafka broker service
+./bin/kafka-server-start.sh config/server.properties
+
+# CREATE the Kafka topic
+./bin/kafka-topics.sh --create --topic basic_table --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
+
+# DESCRIBE the Kafka topic
+./bin/kafka-topics.sh --describe --bootstrap-server localhost:9092 --topic basic_table
+
+# DELETE the Kafka topic
+./bin/kafka-topics.sh --delete --topic basic_table --bootstrap-server localhost:9092
+
+# Kafka Producer
+./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic basic_table
+
+# Kafka Consumer
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic basic_table  --from-beginning
+
+
+
 
 
 
@@ -73,8 +106,8 @@ curl -X POST -H "Content-Type: application/json" -d @connect-cassandra-orders.js
 
 
 ./bin/kafka-console-producer.sh \
- --broker-list localhost:9092 --topic orders \
- --property value.schema='{"type":"record","name":"myrecord","fields":[{"name":"id","type":"int"},{"name":"created","type":"string"},{"name":"product","type":"string"},{"name":"price","type":"double"}, {"name":"qty", "type":"int"}]}'
+ --broker-list localhost:9092 --topic basic_table \
+ --property value.schema='{"type":"record","name":"basic_table","fields":[{"name":"userid","type":"string"},{"name":"username","type":"string"}]}'
 
 
 
